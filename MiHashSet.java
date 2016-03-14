@@ -108,11 +108,37 @@ public class MiHashSet
             {
                 cadena = cadena + ", " + arrayInt.get(index);
             }
+             if(index == 1){
+            cadena = cadena + ", " + arrayInt.get(index);
+            }
             index++;
         }
        
         return "[" + cadena + "]";
     }
     
+    /**
+     * Metodo que devuelve verdadero si el parámetro es igual al conjunto sobre el que se invoca y falso en otro caso.
+     */
+    public boolean equals(MiHashSet otroConjunto)
+    {
+        boolean devolver = true;
+        if (otroConjunto.size() == arrayInt.size()) // si son iguales comienza en caso contrario devolvemos false
+        {
+            for(int index = 0; index < arrayInt.size() && devolver ;index++)
+            {
+                if(!(otroConjunto.contains(arrayInt.get(index))))
+                {
+                    devolver = false;
+                }
+                index++;
+            }
+        }
+        else
+        {
+            devolver = false;
+        }
+        return devolver;
+    }
     
 }
