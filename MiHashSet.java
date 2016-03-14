@@ -62,10 +62,25 @@ public class MiHashSet
      */
     public boolean isEmpty() {
         boolean existe = false;
-        if (!arrayInt.contains(elemento)){
+        if (arrayInt.isEmpty() == true){
             existe = true;        
         } 
-        return existe;     
+        return existe;          
+    }
+    
+    /**
+     * 
+     */
+    public boolean remove(int elemento) {
+        boolean existe = false;
+        if (isEmpty() == true){
+           arrayInt.remove(elemento);       
+        } else {
+            
+          existe = true;
+        
+        }
+        return existe;
     }
     
 }

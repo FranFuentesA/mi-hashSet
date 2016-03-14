@@ -156,7 +156,7 @@ public class TestMiHashSet
                           String nombreFuncion)
     {
         int valorDevuelto = 0;
-        if (valorEsperado == valorObtenido) {
+        if (valorEsperado.equals(valorObtenido)) {
             System.out.println("OK: " + nombreFuncion);
         }
         else {
