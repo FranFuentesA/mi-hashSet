@@ -57,6 +57,7 @@ public class MiHashSet
         } 
         return existe;
     }
+
     /**
      * Metodo que devuelve verdadero si el conjunto no contiene elementos
      */
@@ -67,21 +68,27 @@ public class MiHashSet
         } 
         return existe;          
     }
-    
+
     /**
-     * 
+     * Metodo que elimina del conjunto el elemento dado. Si no existiera devuelve falso; si existía en el conjunto devuelve verdadero.
      */
     public boolean remove(int elemento) {
         boolean existe = false;
-        if (isEmpty() == true){
-           arrayInt.remove(elemento);       
+        if (contains(elemento) == true){
+            arrayInt.remove(elemento);       
         } else {
-            
-          existe = true;
-        
+            existe = true;        
         }
         return existe;
     }
-    
-}
 
+    /**
+     *  devuelve el número de elementos del conjunto.
+     */
+
+    public int size() {
+        
+        return arrayInt.size();
+        
+    }
+}
