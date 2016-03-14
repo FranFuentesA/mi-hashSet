@@ -73,11 +73,11 @@ public class MiHashSet
      * Metodo que elimina del conjunto el elemento dado. Si no existiera devuelve falso; si existía en el conjunto devuelve verdadero.
      */
     public boolean remove(int elemento) {
-        boolean existe = false;
+        boolean existe = true;
         if (contains(elemento) == true){
             arrayInt.remove(arrayInt.indexOf(elemento));       
         } else {
-            existe = true;        
+            existe = false;        
         }
         return existe;
     }
@@ -98,7 +98,7 @@ public class MiHashSet
     public String toString()
     {
         //iniciamos la variable a devolver con un corchete
-        String cadena = "[";           
+        String cadena = "";           
         for (int index = 0; arrayInt.size() > index; index++) {
             if(index == 0) //condicion para la primera posicion, despues comillas.
             {
@@ -110,9 +110,9 @@ public class MiHashSet
             }
             index++;
         }
-        //finalizamos la variable a recorrer con un corchete
-        cadena = cadena + "]";
-        return cadena;
+       
+        return "[" + cadena + "]";
     }
-
+    
+    
 }
