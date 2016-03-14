@@ -75,7 +75,7 @@ public class MiHashSet
     public boolean remove(int elemento) {
         boolean existe = false;
         if (contains(elemento) == true){
-            arrayInt.remove(elemento);       
+            arrayInt.remove(arrayInt.indexOf(elemento));       
         } else {
             existe = true;        
         }
@@ -87,8 +87,32 @@ public class MiHashSet
      */
 
     public int size() {
-        
+
         return arrayInt.size();
-        
+
     }
+
+    /**
+     *  Metodo que devuelve una cadena conteniendo todos los elementos del conjunto separados por comas y entre corchetes.
+     */
+    public String toString()
+    {
+        //iniciamos la variable a devolver con un corchete
+        String cadena = "[";           
+        for (int index = 0; arrayInt.size() > index; index++) {
+            if(index == 0) //condicion para la primera posicion, despues comillas.
+            {
+                cadena = cadena + arrayInt.get(index);
+            }
+            else
+            {
+                cadena = cadena + ", " + arrayInt.get(index);
+            }
+            index++;
+        }
+        //finalizamos la variable a recorrer con un corchete
+        cadena = cadena + "]";
+        return cadena;
+    }
+
 }
