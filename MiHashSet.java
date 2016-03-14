@@ -7,7 +7,7 @@
  */
 public class MiHashSet
 {
-    
+
     private ArrayListInt arrayInt; //Utilizo la clase ArrayListInt
 
     /**
@@ -26,7 +26,7 @@ public class MiHashSet
     public boolean add(int valor)
     {
         boolean existe = true;
-       
+
         if(!(arrayInt.contains(valor))) // compruebo que mi array contiene el elemento
         {
             arrayInt.add(valor); // si no existe lo añado
@@ -37,6 +37,12 @@ public class MiHashSet
         }
         return existe;
     }
-    
-   
+
+    /**
+     * Metodo que vacia el conjunto
+     */
+    public void clear()
+    {
+        arrayInt.clear();
+    }
 }
