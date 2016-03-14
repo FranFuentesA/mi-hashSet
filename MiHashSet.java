@@ -45,20 +45,28 @@ public class MiHashSet
     {
         arrayInt.clear();
     }
-    
-     /**
-      * Devuelve si el hashSet contiene o no el elemento pasado como parametro
-      
+
+    /**
+     * Metodo que devuelve verdadero si el conjunto contiene el elemento, falso en caso contrario.
      */
     public boolean contains(int elemento)
     {
         boolean existe = true;
         if (!arrayInt.contains(elemento)){
-            
-            existe = false;
-           
-         
+            existe = false;        
         } 
         return existe;
-     }
+    }
+    /**
+     * Metodo que devuelve verdadero si el conjunto no contiene elementos
+     */
+    public boolean isEmpty() {
+        boolean existe = false;
+        if (!arrayInt.contains(elemento)){
+            existe = true;        
+        } 
+        return existe;     
+    }
+    
 }
+

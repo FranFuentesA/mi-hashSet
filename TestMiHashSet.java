@@ -35,7 +35,7 @@ public class TestMiHashSet
         //toString
         System.out.println();
         System.out.println("Obteniendo la representacion en cadena del conjunto...")    ;   
-        numeroTestsFallados += testea("()", hashset.toString(), "toString");            
+        numeroTestsFallados += testea("[]", hashset.toString(), "toString");            
         
         //add
         System.out.println();
@@ -85,7 +85,7 @@ public class TestMiHashSet
         //toString
         System.out.println();
         System.out.println("Obteniendo la representacion en cadena del conjunto...")    ;   
-        numeroTestsFallados += testea("(9, 3, 6)", hashset.toString(), "toString");     
+        numeroTestsFallados += testea("[9, 3, 6]", hashset.toString(), "toString");     
         
         //equals
         System.out.println();
@@ -123,7 +123,7 @@ public class TestMiHashSet
         //toString
         System.out.println();
         System.out.println("Obteniendo la representacion en cadena del conjunto...")    ;   
-        numeroTestsFallados += testea("()", hashset.toString(), "toString");        
+        numeroTestsFallados += testea("[]", hashset.toString(), "toString");        
         
         //equals
         System.out.println();
